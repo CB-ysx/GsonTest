@@ -83,17 +83,17 @@ public class FromJsonTest extends Activity {
 	private void showData() {
 		String showString = "";
 
-		showString += one();
-		showString += two();
-		showString += three();
-		showString += four();
-		showString += five();
-		showString += six();
-		showString += seven();
-		showString += eight();
-		showString += nine();
-		showString += ten();
-		showString += eleven();
+//		showString += one();
+//		showString += two();
+//		showString += three();
+//		showString += four();
+//		showString += five();
+//		showString += six();
+//		showString += seven();
+//		showString += eight();
+//		showString += nine();
+//		showString += ten();
+//		showString += eleven();
 		showString += twelve();
 
 		show.setText(showString);
@@ -436,13 +436,11 @@ public class FromJsonTest extends Activity {
 	private String twelve() {
 
 		Gson gson2 = new GsonBuilder().setVersion(1.0).create();
-		GsonBuilderBeanThree gsonBuilderBeanThree = new GsonBuilderBeanThree(
-				"144", "123");
 
 		String showString = "";
-		String jsonString = gson2.toJson(gsonBuilderBeanThree);
+		String jsonString = "{'username':'144','password':'123'}";
 		showString += "json:" + jsonString + "\n解析后的数据：\n";
-		GsonBuilderBeanThree beanThree = gson.fromJson(jsonString,
+		GsonBuilderBeanThree beanThree = gson2.fromJson(jsonString,
 				GsonBuilderBeanThree.class);
 
 		showString += beanThree.toString();

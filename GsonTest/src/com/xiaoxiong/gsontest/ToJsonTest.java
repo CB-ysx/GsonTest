@@ -56,17 +56,17 @@ public class ToJsonTest extends Activity {
 
 		String resultString = "";
 
-		resultString = one() + "\n\n";
-		resultString += two() + "\n\n";
-		resultString += three() + "\n\n";
-		resultString += four() + "\n\n";
-		resultString += five() + "\n\n";
-		resultString += six() + "\n\n";
-		resultString += seven() + "\n\n";
-		resultString += eight() + "\n\n";
-		resultString += nine() + "\n\n";
-		resultString += ten() + "\n\n";
-		resultString += eleven() + "\n\n";
+//		resultString = one() + "\n\n";
+//		resultString += two() + "\n\n";
+//		resultString += three() + "\n\n";
+//		resultString += four() + "\n\n";
+//		resultString += five() + "\n\n";
+//		resultString += six() + "\n\n";
+//		resultString += seven() + "\n\n";
+//		resultString += eight() + "\n\n";
+//		resultString += nine() + "\n\n";
+//		resultString += ten() + "\n\n";
+//		resultString += eleven() + "\n\n";
 		resultString += twelve() + "\n\n";
 
 		show.setText(resultString);
@@ -293,7 +293,7 @@ public class ToJsonTest extends Activity {
 	 */
 	private String twelve() {
 
-		Gson gson2 = new GsonBuilder().setVersion(1.0).create();
+		Gson gson2 = new GsonBuilder().setVersion(1.1).create();
 		GsonBuilderBeanThree gsonBuilderBeanThree = new GsonBuilderBeanThree(
 				"144", "123");
 

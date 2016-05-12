@@ -5,7 +5,7 @@ import com.google.gson.annotations.SerializedName;
 /**
  * 
  * @ClassName: GsonBuilderBeanTwo
- * @Description: 使用注解自定义序列化名称
+ * @Description: 使用注解自定义序列化字段名称
  * @author smile
  * @date 2016年5月12日 上午11:53:54
  * 
