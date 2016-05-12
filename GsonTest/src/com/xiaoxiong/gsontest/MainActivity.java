@@ -63,11 +63,11 @@ public class MainActivity extends Activity implements OnClickListener {
 	/**
 	 * 百度翻译appid
 	 */
-	private final static String APPID = "20160331000017291";
+	private final static String APPID = "你的appid";
 	/**
 	 * 百度翻译秘钥
 	 */
-	private final static String PASSWORD = "uVMiy1rwuIZYxIwEbZ0I";
+	private final static String PASSWORD = "你的秘钥";
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -133,7 +133,7 @@ public class MainActivity extends Activity implements OnClickListener {
 
 					HttpPost httpPost = new HttpPost(URL);
 					List<NameValuePair> params = new ArrayList<NameValuePair>();
-					params.add(new BasicNameValuePair("q", "晓熳"));
+					params.add(new BasicNameValuePair("q", "要翻译的文本"));
 					params.add(new BasicNameValuePair("from", "zh"));
 					params.add(new BasicNameValuePair("to", "en"));
 					params.add(new BasicNameValuePair("appid", APPID));
@@ -143,7 +143,7 @@ public class MainActivity extends Activity implements OnClickListener {
 					 * 进行MD5加密
 					 */
 					params.add(new BasicNameValuePair("sign", MD5Utils
-							.md5(APPID + "晓熳" + "1234567890" + PASSWORD)));
+							.md5(APPID + "要翻译的文本" + "1234567890" + PASSWORD)));
 					UrlEncodedFormEntity urlEncodedFormEntity = new UrlEncodedFormEntity(
 							params, "utf-8");
 					httpPost.setEntity(urlEncodedFormEntity);
